@@ -1,4 +1,4 @@
-ACAAN>
+<細數巴格拉斯>
 <html>
 <head>
 	<title>ACAAN</title>
@@ -25,7 +25,7 @@ ACAAN>
 	</style>
 </head>
 <body>
-	<form>
+	<form id="input-form">
 		<label for="b">請輸入牌：</label>
 		<input type="number" id="b" name="b">
 		<br>
@@ -34,17 +34,181 @@ ACAAN>
 		<br>
 		<button type="button" onclick="calculate()">計算</button>
 	</form>
-	<p id="result"></p>
+	<p id="result" style="display: none;"></p>
+	<p id="extra-text" style="display: none;"></p>
 	<script>
 		function calculate() {
 			var b = parseInt(document.getElementById("b").value);
 			var a = parseInt(document.getElementById("a").value);
 			var result = b - (53 - a);
-			if (result >= 0) {
-				document.getElementById("result").innerHTML = "第 " + result + " 張";
-			} else {
-				document.getElementById("result").innerHTML = "第 " + (result + 52) + " 張";
+			if (result < 1) {
+				result += 52;
 			}
+			var y;
+			switch(result) {
+				case 1:
+					y = "梅花4";
+					break;
+				case 2:
+					y = "紅心2";
+					break;
+				case 3:
+					y = "方塊7";
+					break;
+				case 4:
+					y = "梅花3";
+					break;
+				case 5:
+					y = "紅心4";
+					break;
+                        case 6:
+                              y = "方塊6";
+                              break;
+                        case 7:
+                                 y = "黑陶A";
+                                 break;
+                        case 8:
+                             y = "紅心5";
+                               break;
+                        case 9:
+                             y = "黑陶9";
+                               break;
+                       case 10:
+                             y = "黑陶2";
+                               break;
+                       case 11:
+                             y = "紅心Q";
+                               break;
+                       case 12:
+                             y = "方塊3";
+                               break;
+                       case 13:
+                             y = "梅花Q";
+                               break;
+                       case 14:
+                             y = "紅心8";
+                               break;
+                       case 15:
+                             y = "黑陶6";
+                               break;
+                       case 16:
+                             y = "黑陶5";
+                               break;
+                       case 17:
+                             y = "紅心9";
+                               break;
+                       case 18:
+                             y = "梅花K";
+                               break;
+                       case 19:
+                             y = "方塊2";
+                               break;
+                       case 20:
+                             y = "紅心J";
+                               break;
+                       case 21:
+                             y = "黑陶3";
+                               break;
+                       case 22:
+                             y = "黑陶8";
+                               break;
+                       case 23:
+                             y = "紅心6";
+                               break;
+                       case 24:
+                            y = "梅花10";
+                               break;   
+                       case 25:
+                            y = "方塊5";
+                               break;
+                       case 26:
+                            y = "方塊K";
+                               break;
+                       case 27:
+                            y = "梅花2";
+                               break;
+                       case 28:
+                            y = "紅心3";
+                               break;
+                       case 29:
+                            y = "方塊8";
+                               break;
+                       case 30:
+                            y = "梅花5";
+                               break;
+                       case 31:
+                            y = "黑陶K";
+                               break;
+                       case 32:
+                            y = "方塊J";
+                               break;
+                       case 33:
+                            y = "梅花8";
+                               break;
+                       case 34:
+                            y = "黑陶10";
+                               break;
+                       case 35:
+                            y = "紅心K";
+                               break;
+                       case 36:
+                            y = "梅花J";
+                               break;
+                       case 37:
+                            y = "黑陶7";
+                               break;
+                       case 38:
+                            y = "紅心10";
+                               break;
+                       case 39:
+                            y = "方塊A";
+                               break;
+                       case 40:
+                            y = "黑陶4";
+                               break;
+                       case 41:
+                            y = "紅心7";
+                               break;
+                       case 42:
+                            y = "方塊4";
+                               break;
+                       case 43:
+                            y = "梅花A";
+                               break;
+                       case 44:
+                            y = "梅花9";
+                               break;
+                       case 45:
+                            y = "黑陶J";
+                               break;
+                      case 46:
+                            y = "方塊Q";
+                               break;
+                      case 47:
+                            y = "梅花7";
+                               break;
+                      case 48:
+                            y = "黑陶Q";
+                               break;
+                      case 49:
+                            y = "方塊10";
+                               break;
+                      case 50:
+                            y = "梅花6";
+                               break;
+                      case 51:
+                            y = "紅心A";
+                               break;
+                      case 52:
+                            y = "方塊9";
+                               break;
+			    default:
+				    y = "未知";
+			}
+			document.getElementById("input-form").style.display = "none";
+			document.getElementById("result").style.display = "block";
+			document.getElementById("result").innerHTML = "<br>巴格拉斯效果<br>大約在70多年前魔術師大衛巴格拉斯(David Berglas)表演了一個非常不可思議的紙牌魔術,震驚了全世界的魔術師,並且在他表演後的50年都沒人能破解,<br>被魔術圈命名為:巴格拉斯效果(Berglas effect).<br>要做到巴格拉斯效果必須滿足以下幾個條件<br><br>1.在表演前撲克牌可以展示,沒有重複的牌<br>2.觀眾任意說一張牌,說一個1-52裡面的數字<br>3.觀眾把牌一張一張翻開,發到觀眾說的數字,那張牌就會是觀眾說的牌<br>4.表演者在表演過程當中完全不接觸到撲克牌,且觀眾都沒有串通過<br><br>舉例來說:觀眾說 " + y + "、" + result + ",發到第" + result + "張就會是" + y + "<br>讓我們來試試!";
+			document.getElementById("extra-text").style.display = "block";
 		}
 	</script>
 </body>
