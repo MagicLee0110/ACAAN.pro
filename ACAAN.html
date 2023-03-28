@@ -1,41 +1,81 @@
-<細數巴格拉斯>
 <html>
 <head>
 	<title>ACAAN</title>
 	<style>
 		body {
-			font-family: sans-serif;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-top: 50px;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		label {
+			font-size: 20px;
+			margin-bottom: 10px;
 		}
 		input[type="number"] {
-			padding: 5px;
-			font-size: 16px;
-			width: 200px;
-			margin: 5px;
+			padding: 10px;
+			font-size: 18px;
+			width: 300px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			outline: none;
 		}
 		button {
-			padding: 10px;
-			font-size: 16px;
-			margin: 5px;
+			padding: 10px 20px;
+			font-size: 18px;
 			background-color: #3498db;
 			color: white;
 			border: none;
 			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		button:hover {
+			background-color: #2980b9;
+		}
+		.result-container {
+			display: none;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.result-text {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		.extra-text {
+			font-size: 18px;
+			color: #666;
+			margin-top: 20px;
 		}
 	</style>
 </head>
 <body>
+	<h1>細數巴格拉斯</h1>
 	<form id="input-form">
-		<label for="b">請輸入牌：</label>
-		<input type="number" id="b" name="b">
-		<br>
+		<label for="b">請輸入牌數量：</label>
+		<input type="number" id="b" name="b" min="1" required>
 		<label for="a">請輸入數字：</label>
-		<input type="number" id="a" name="a">
-		<br>
+		<input type="number" id="a" name="a" min="1" max="52" required>
 		<button type="button" onclick="calculate()">計算</button>
 	</form>
-	<p id="result" style="display: none;"></p>
-	<p id="extra-text" style="display: none;"></p>
+	<div class="result-container" id="result-container">
+		<div class="result-text" id="result"></div>
+		<div class="extra-text" id="extra-text"></div>
+	</div>
 	<script>
 		function calculate() {
 			var b = parseInt(document.getElementById("b").value);
@@ -206,10 +246,11 @@
 				    y = "未知";
 			}
 			document.getElementById("input-form").style.display = "none";
-			document.getElementById("result").style.display = "block";
+			document.getElementById("result-container").style.display = "block";
 			document.getElementById("result").innerHTML = "<br>巴格拉斯效果<br>大約在70多年前魔術師大衛巴格拉斯(David Berglas)表演了一個非常不可思議的紙牌魔術,震驚了全世界的魔術師,並且在他表演後的50年都沒人能破解,<br>被魔術圈命名為:巴格拉斯效果(Berglas effect).<br>要做到巴格拉斯效果必須滿足以下幾個條件<br><br>1.在表演前撲克牌可以展示,沒有重複的牌<br>2.觀眾任意說一張牌,說一個1-52裡面的數字<br>3.觀眾把牌一張一張翻開,發到觀眾說的數字,那張牌就會是觀眾說的牌<br>4.表演者在表演過程當中完全不接觸到撲克牌,且觀眾都沒有串通過<br><br>舉例來說:觀眾說 " + y + "、" + result + ",發到第" + result + "張就會是" + y + "<br>讓我們來試試!";
 			document.getElementById("extra-text").style.display = "block";
 		}
 	</script>
 </body>
 </html>
+
