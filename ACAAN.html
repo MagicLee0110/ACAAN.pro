@@ -82,9 +82,25 @@
 			line-height: 1.5;
 			letter-spacing: 1px;
 		}
+		.wrapper {
+                        max-width: 800px;
+                        margin: 0 auto;
+                        border: 2px solid #ccc;
+                        padding: 20px;
+                         }
+
+                @media screen and (max-width: 600px) {
+                .wrapper {
+                      border: none;
+                      padding: 0;
+                      margin: 0;
+                      max-width: 100%;
+                            }
+                    }
 	</style>
 </head>
 <body>
+    <div class="wrapper">
 	<h1>細數巴格拉斯</h1>
 	<form id="input-form">
 		<label for="b">請輸入牌：</label>
@@ -272,6 +288,7 @@
 			document.getElementById("extra-text").style.display = "block";
 		}
 	</script>
+</div>
 </body>
 </html>
 
