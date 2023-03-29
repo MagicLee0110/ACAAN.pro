@@ -3,39 +3,52 @@
 	<title>ACAAN</title>
 	<style>
 		body {
-			font-family: Arial, sans-serif;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 			background-color: #f2f2f2;
 			margin: 0;
 			padding: 0;
+			color: #333;
+			line-height: 1.5;
 		}
 		h1 {
 			text-align: center;
-			font-size: 36px;
-			margin-top: 50px;
+			font-size: 42px;
+			margin-top: 60px;
+			margin-bottom: 40px;
+			letter-spacing: 1px;
 		}
 		form {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 50px;
+			margin-top: 60px;
 		}
 		label {
-			font-size: 20px;
-			margin-bottom: 10px;
+			font-size: 24px;
+			margin-bottom: 20px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
 		input[type="number"] {
-			padding: 10px;
-			font-size: 18px;
+			padding: 12px;
+			font-size: 20px;
 			width: 300px;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 			border-radius: 5px;
 			border: none;
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 			outline: none;
+			text-align: center;
+			background-color: #f9f9f9;
+			color: #666;
+			font-weight: bold;
+			letter-spacing: 1px;
 		}
 		button {
-			padding: 10px 20px;
-			font-size: 18px;
+			padding: 12px 24px;
+			font-size: 20px;
 			background-color: #3498db;
 			color: white;
 			border: none;
@@ -43,6 +56,8 @@
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 			cursor: pointer;
 			transition: all 0.3s ease;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
 		button:hover {
 			background-color: #2980b9;
@@ -50,16 +65,22 @@
 		.result-container {
 			display: none;
 			text-align: center;
-			margin-top: 50px;
+			margin-top: 60px;
 		}
 		.result-text {
-			font-size: 24px;
-			margin-bottom: 20px;
+			font-size: 30px;
+			margin-bottom: 30px;
+			font-weight: bold;
+			line-height: 1.5;
+			letter-spacing: 1px;
 		}
 		.extra-text {
-			font-size: 18px;
+			font-size: 20px;
 			color: #666;
-			margin-top: 20px;
+			margin-top: 30px;
+			text-align: center;
+			line-height: 1.5;
+			letter-spacing: 1px;
 		}
 	</style>
 </head>
@@ -86,7 +107,7 @@
 			}
 			var y;
 			switch(result) {
-				case 1:
+			case 1:
 					y = "梅花4";
 					break;
 				case 2:
