@@ -80,6 +80,23 @@
                 display: none;
                 }
 	</style>
+<body>
+	<!-- 此處省略原始 HTML 代碼 -->
+	<script>
+		// 獲取使用者輸入的密碼
+		var password = prompt("請輸入密碼", "");
+
+		// 如果使用者輸入的密碼正確，顯示網頁內容
+		if (password === "42734") {
+			document.body.style.display = "block";
+		}
+		// 如果使用者輸入的密碼不正確，隱藏網頁內容
+		else {
+			document.body.style.display = "none";
+			alert("密碼不正確，請重試。");
+		}
+	</script>
+</body>
 </head>
 <body>
 	<h1>細數巴格拉斯</h1>
