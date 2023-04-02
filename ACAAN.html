@@ -100,167 +100,171 @@
 	function calculate() {
 		var b = parseInt(document.getElementById("b").value);
 		var a = parseInt(document.getElementById("a").value);
-		var result = b - (53 - a);
+                var b = b - 17;
+		if (result < 0) {
+			result += 52;
+			}
+		var result = b  - (53 - a);
 		var pageNum = 53 - a;
 		if (result < 1) {
 			result += 52;
 		}
 		var y;
 		switch(result) {
-			case 1:
+				case 36:
 					y = "梅花4";
 					break;
-				case 2:
+				case 37:
 					y = "紅心2";
 					break;
-				case 3:
+				case 38:
 					y = "方塊7";
 					break;
-				case 4:
+				case 39:
 					y = "梅花3";
 					break;
-				case 5:
+				case 40:
 					y = "紅心4";
 					break;
-                        case 6:
+                        case 41:
                               y = "方塊6";
                               break;
-                        case 7:
-                                 y = "黑陶A";
-                                 break;
-                        case 8:
+                        case 42:
+                              y = "黑陶A";
+                               break;
+                        case 43:
                              y = "紅心5";
                                break;
-                        case 9:
+                        case 44:
                              y = "黑陶9";
                                break;
-                       case 10:
+                       case 45:
                              y = "黑陶2";
                                break;
-                       case 11:
+                       case 46:
                              y = "紅心Q";
                                break;
-                       case 12:
+                       case 47:
                              y = "方塊3";
                                break;
-                       case 13:
+                       case 48:
                              y = "梅花Q";
                                break;
-                       case 14:
+                       case 49:
                              y = "紅心8";
                                break;
-                       case 15:
+                       case 50:
                              y = "黑陶6";
                                break;
-                       case 16:
+                       case 51:
                              y = "黑陶5";
                                break;
-                       case 17:
+                       case 52:
                              y = "紅心9";
                                break;
-                       case 18:
+                       case 1:
                              y = "梅花K";
                                break;
-                       case 19:
+                       case 2:
                              y = "方塊2";
                                break;
-                       case 20:
+                       case 3:
                              y = "紅心J";
                                break;
-                       case 21:
+                       case 4:
                              y = "黑陶3";
                                break;
-                       case 22:
+                       case 5:
                              y = "黑陶8";
                                break;
-                       case 23:
+                       case 6:
                              y = "紅心6";
                                break;
-                       case 24:
+                       case 7:
                             y = "梅花10";
                                break;   
-                       case 25:
+                       case 8:
                             y = "方塊5";
                                break;
-                       case 26:
+                       case 9:
                             y = "方塊K";
                                break;
-                       case 27:
+                       case 10:
                             y = "梅花2";
                                break;
-                       case 28:
+                       case 11:
                             y = "紅心3";
                                break;
-                       case 29:
+                       case 12:
                             y = "方塊8";
                                break;
-                       case 30:
+                       case 13:
                             y = "梅花5";
                                break;
-                       case 31:
+                       case 14:
                             y = "黑陶K";
                                break;
-                       case 32:
+                       case 15:
                             y = "方塊J";
                                break;
-                       case 33:
+                       case 16:
                             y = "梅花8";
                                break;
-                       case 34:
+                       case 17:
                             y = "黑陶10";
                                break;
-                       case 35:
+                       case 18:
                             y = "紅心K";
                                break;
-                       case 36:
+                       case 19:
                             y = "梅花J";
                                break;
-                       case 37:
+                       case 20:
                             y = "黑陶7";
                                break;
-                       case 38:
+                       case 21:
                             y = "紅心10";
                                break;
-                       case 39:
+                       case 22:
                             y = "方塊A";
                                break;
-                       case 40:
+                       case 23:
                             y = "黑陶4";
                                break;
-                       case 41:
+                       case 24:
                             y = "紅心7";
                                break;
-                       case 42:
+                       case 25:
                             y = "方塊4";
                                break;
-                       case 43:
+                       case 26:
                             y = "梅花A";
                                break;
-                       case 44:
+                       case 27:
                             y = "梅花9";
                                break;
-                       case 45:
+                       case 28:
                             y = "黑陶J";
                                break;
-                      case 46:
+                      case 29:
                             y = "方塊Q";
                                break;
-                      case 47:
+                      case 30:
                             y = "梅花7";
                                break;
-                      case 48:
+                      case 31:
                             y = "黑陶Q";
                                break;
-                      case 49:
+                      case 32:
                             y = "方塊10";
                                break;
-                      case 50:
+                      case 33:
                             y = "梅花6";
                                break;
-                      case 51:
+                      case 34:
                             y = "紅心A";
                                break;
-                      case 52:
+                      case 35:
                             y = "方塊9";
                                break;
 			default:
@@ -273,4 +277,3 @@
 		document.getElementById("page-number").innerHTML = `-第${+ pageNum }頁-`;
 	}
 </script>
-
